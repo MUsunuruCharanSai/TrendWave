@@ -43,6 +43,10 @@ function Signup() {
             
         } catch (error) {
             console.log(error)
+            toast.error("Valid details required & Password must be 6+ characters.");
+            setName("");
+            setEmail("");
+            setPassword("");
             setLoading(false)
         }
     }
@@ -79,7 +83,7 @@ function Signup() {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         className=' bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none'
-                        placeholder='Password'
+                        placeholder='Password 6+ characters'
                     />
                 </div>
                 <div className=' flex justify-center mb-3'>

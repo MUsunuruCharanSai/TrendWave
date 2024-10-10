@@ -36,6 +36,9 @@ function Login() {
             
         } catch (error) {
             console.log(error)
+            toast.error("Enter Valid Details");
+            setEmail("")
+            setPassword("")
             setLoading(loading)
         }
 
